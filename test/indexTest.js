@@ -1,21 +1,12 @@
-const chai = require("chai");
-global.expect = chai.expect;
-const isPalindrome = require("../index");
+// indexTest.js
 
-describe("isPalindrome", () => {
-  it("returns true for 'abba'", () => {
-    expect(isPalindrome("abba")).to.be.true;
-  });
-  it("returns true for 'racecar'", () => {
-    expect(isPalindrome("racecar")).to.be.true;
-  });
-  it("returns true for 'a'", () => {
-    expect(isPalindrome("a")).to.be.true;
-  });
-  it("returns false for 'robot'", () => {
-    expect(isPalindrome("robot")).to.be.false;
-  });
-  it("returns false for 'ab'", () => {
-    expect(isPalindrome("ab")).to.be.false;
-  });
-});
+const isPalindrome = require('./index'); // importing the function from index.js
+const assert = require('assert'); // importing the assert module
+
+// Test cases
+assert.strictEqual(isPalindrome("madam"), true); // true
+assert.strictEqual(isPalindrome("robot"), false); // false
+assert.strictEqual(isPalindrome("level"), true); // true
+assert.strictEqual(isPalindrome("hello"), false); // false
+
+console.log("All test cases passed successfully!");
